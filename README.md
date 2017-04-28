@@ -1,16 +1,12 @@
 # \<iron-moment-validator\>
 
-Polymer behavior Validates date and time input using momentjs
+Polymer behavior which validates date and time input using momentjs
 
 ## Install 
 
 ```
-bower install https://gitlab.com/mima/iron-moment-validator.git --save
+bower install iron-moment-validator --save
 ```
-
-
-## Clone
-git clone https://gitlab.com/mima/iron-moment-validator.git
 
 ## Viewing the Element
 
