@@ -9,42 +9,39 @@ Date validation with locale support based on momentsjs for input elements which 
 
 @demo demo/index.html
 -->
-<dom-module id="iron-moment-validator">
-  <template>
-    <script>
-      Polymer({
 
-        is: 'iron-moment-validator',
-        properties: {
-          // locale as known by momentjs
-          locale: {
-            type: String,
-            value: "en"
-          },
+<script>
+  Polymer({
 
-          /**
-           * Formatstring as known by momentjs.
-           *
-           * Either a longDateFormat like 'L' or an explicit format (DD/MM/YYYY)
-           */
-          dateFormat: {
-            type: String,
-            value: 'L'
-          }
-        },
+    is: 'iron-moment-validator',
+    properties: {
+      // locale as known by momentjs
+      locale: {
+        type: String,
+        value: "en"
+      },
 
-        behaviors: [
-          Polymer.IronValidatorBehavior
-        ],
+      /**
+       * Formatstring as known by momentjs.
+       *
+       * Either a longDateFormat like 'L' or an explicit format (DD/MM/YYYY)
+       */
+      dateFormat: {
+        type: String,
+        value: 'L'
+      }
+    },
+
+    behaviors: [
+      Polymer.IronValidatorBehavior
+    ],
 
 
-        validate: function (values) {
-          var mom = moment(values, this.dateFormat, this.locale, true);
-          mom.locale(this.locale);
-          return mom.isValid();
-        }
+    validate: function (values) {
+      var mom = moment(values, this.dateFormat, this.locale, true);
+      mom.locale(this.locale);
+      return mom.isValid();
+    }
 
-      });
-    </script>
-  </template>
-</dom-module>
+  });
+</script>
