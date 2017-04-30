@@ -6,9 +6,18 @@
       "type": "chrome",
       "request": "launch",
       "name": "Run in Chrome",
-      "url": "http://localhost:8081",
+      "url": "http://localhost:8081/components/iron-moment-validator/",
       "webRoot": "${workspaceRoot}",
-      "sourceMaps": false
+      "sourceMaps": false,
+      "linux": {
+        "runtimeExecutable": "chromium-browser",
+        "address": "127.0.0.1",
+        "port": 9222,
+        "runtimeArgs": [
+          "--remote-debugging-port=9222",
+          "--user-data-dir=remote-profile"
+        ]
+      }
     }
   ]
 }
